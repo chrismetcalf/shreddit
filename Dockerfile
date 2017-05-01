@@ -11,11 +11,9 @@ LABEL \
     }                                     \
   ]"
 
-RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y python-pip cron
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y python-pip
 RUN pip install shreddit
 
-ADD crontab /etc/cron.d/shreddit-cron
-RUN chmod 0644 /etc/cron.d/shreddit-cron
-RUN touch /var/log/cron.log
-
 VOLUME /config
+
+CMD shreddit --verbose
