@@ -1,6 +1,5 @@
 FROM ubuntu:latest
-LABEL \
-  org.freenas.autostart="true"            \
+LABEL org.freenas.autostart="false"       \
   org.freenas.interactive="false"         \
   org.freenas.version="Latest"            \
   org.freenas.upgradeable="true"          \
