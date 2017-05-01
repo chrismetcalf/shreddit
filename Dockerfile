@@ -15,4 +15,4 @@ RUN pip install shreddit
 
 VOLUME /config
 
-CMD shreddit --verbose
+CMD shreddit
